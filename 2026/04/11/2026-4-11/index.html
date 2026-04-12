@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>个人博客 | 个人博客</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="什么是 Flex？一句话：Flex &#x3D; 一维布局（要么排一行，要么排一列）它能干什么？把元素排成 一行（水平排列）把元素排成 一列（垂直排列）让元素 居中、平分、自动撑开对比写法（超好记）css&#x2F;* 水平排列 *&#x2F;display: flex;  &#x2F;* 垂直排列 &#x2F;display: flex;flex-direction: column;你会用到的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="个人博客">
+<meta property="og:url" content="http://example.com/2026/04/11/2026-4-11/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="什么是 Flex？一句话：Flex &#x3D; 一维布局（要么排一行，要么排一列）它能干什么？把元素排成 一行（水平排列）把元素排成 一列（垂直排列）让元素 居中、平分、自动撑开对比写法（超好记）css&#x2F;* 水平排列 *&#x2F;display: flex;  &#x2F;* 垂直排列 &#x2F;display: flex;flex-direction: column;你会用到的">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
+<meta property="article:published_time" content="2026-04-11T13:37:47.102Z">
+<meta property="article:modified_time" content="2026-04-12T11:32:54.914Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "url": "http://example.com/2026/04/11/2026-4-11/",
+  "image": "http://example.com/img/butterfly-icon.png",
+  "datePublished": "2026-04-11T13:37:47.102Z",
+  "dateModified": "2026-04-12T11:32:54.914Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "John Doe",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2026/04/11/2026-4-11/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '个人博客',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">个人博客</span></a><a class="nav-page-title" href="/"><span class="site-name">个人博客</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">Untitled</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-04-11T13:37:47.102Z" title="Created 2026-04-11 21:37:47">2026-04-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-04-12T11:32:54.914Z" title="Updated 2026-04-12 19:32:54">2026-04-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><ol>
+<li>什么是 Flex？<br>一句话：Flex &#x3D; 一维布局（要么排一行，要么排一列）<br>它能干什么？<br>把元素排成 一行（水平排列）<br>把元素排成 一列（垂直排列）<br>让元素 居中、平分、自动撑开<br>对比写法（超好记）<br>css<br>&#x2F;* 水平排列 *&#x2F;<br>display: flex;</li>
+</ol>
+<p>&#x2F;* 垂直排列 <em>&#x2F;<br>display: flex;<br>flex-direction: column;<br>你会用到的场景<br>导航栏水平排列<br>按钮组水平对齐<br>Hero 区文字居中<br>让一个盒子上下左右居中<br>你的代码里出现过<br>css<br>display: flex;<br>align-items: center;    &#x2F;</em> 上下居中 <em>&#x2F;<br>justify-content: center; &#x2F;</em> 左右居中 <em>&#x2F;<br>2. 什么是 Grid？<br>一句话：Grid &#x3D; 二维布局（可以同时控制行和列，像 Excel 表格）<br>它能干什么？<br>同时控制 多行 + 多列<br>实现卡片网格、瀑布流、复杂页面布局<br>对比写法<br>css<br>display: grid;<br>grid-template-columns: 1fr 1fr 1fr; &#x2F;</em> 三列等宽 <em>&#x2F;<br>grid-gap: 20px; &#x2F;</em> 格子之间间距 *&#x2F;<br>看起来像<br>plaintext<br>┌─────┬─────┬─────┐<br>│     │     │     │<br>├─────┼─────┼─────┤<br>│     │     │     │<br>└─────┴─────┴─────┘<br>你代码里的问题（关键）<br>你之前写的：<br>css<br>display: grid;<br>grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);<br>这就是 双列布局！<br>意思是：<br>左边占 3 份空间<br>右边占 2 份空间<br>内容只能在左列，无法全局居中<br>所以你才看到 左右错位、文字只在左半部分。<br>3. 什么是双列布局？<br>一句话：双列布局 &#x3D; 一个容器里有左右两列<br>两种常见写法<br>Grid 双列<br>css<br>display: grid;<br>grid-template-columns: 1fr 1fr;<br>Flex 双列<br>css<br>display: flex;<br>子元素分别占 50%<br>视觉对比<br>plaintext<br>[ 左列 ]   [ 右列 ]<br>为什么你报错？<br>你把 Hero 区做成了 双列布局，但你想要 全局居中，这本身就矛盾。</p>
+<p>今天做了什么：</p>
+<p>改零代码生成平台前端，</p>
+<p>了解了k8s,支付宝沙箱支付流程</p>
+<p>了解了怎么解决本地事务失效的问题，使用代理对象去调用方法</p>
+<p>了解分布式事务</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2026/04/11/2026-4-11/">http://example.com/2026/04/11/2026-4-11/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/04/06/2026-04-06/" title=""><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2"></div></div><div class="info-2"><div class="info-item-1">2026&#x2F;4&#x2F;6日笔记✅ v-if&#x3D;”isTrue” 核心：条件渲染，布尔值为 false 时「直接不生成 DOM 元素」 特点：按需渲染，切换开销大（销毁 &#x2F; 重建 DOM），适合不频繁切换的场景  ✅ v-show&#x3D;”isTrue” 核心：条件显示，布尔值为 false 时「通过 CSS (display: none) 隐藏元素」 特点：DOM 始终存在，切换开销小，适合频繁切换的场景  ✅ v-on:xxx → 简写 @xxx 核心：事件绑定指令，监听 DOM 原生事件 &#x2F; 组件自定义事件 常用场景：@click=&quot;submit&quot;（点击）、@keyup.enter=&quot;submit&quot;（回车）、@input=&quot;handleInput&quot;（输入） 配套修饰符：@click.stop（阻止冒泡）、@click.prevent（阻止默认行为）、@submit.prevent（表单阻止刷新）  ✅ v-bind:xxx → 简写 :xxx 核心：数据单向绑定，仅「Mod...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">John Doe</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/11/2026-4-11/" title="Untitled">Untitled</a><time datetime="2026-04-11T13:37:47.102Z" title="Created 2026-04-11 21:37:47">2026-04-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/06/2026-04-06/" title="Untitled">Untitled</a><time datetime="2026-04-06T02:50:36.905Z" title="Created 2026-04-06 10:50:36">2026-04-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/04/hello-world/" title="Untitled">Untitled</a><time datetime="2026-04-04T01:57:19.825Z" title="Created 2026-04-04 09:57:19">2026-04-04</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By John Doe</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
